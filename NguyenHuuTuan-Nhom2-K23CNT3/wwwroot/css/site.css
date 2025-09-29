@@ -1,0 +1,178 @@
+﻿    html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fafb;
+    background-image: url('/image/homeimage.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.user-icon, .user-name {
+    color: lawngreen !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.user-link:hover .user-icon,
+.user-link:hover .user-name {
+    color: #28a745; /* xanh lá tươi hơn */
+    transform: scale(1.1);
+}
+
+/* Navbar */
+.brand-text {
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(270deg, #a3e635, #4ade80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+    .brand-text:hover {
+        background: linear-gradient(270deg, #16a34a, #65a30d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(1.05);
+    }
+.custom-navbar {
+    background-image: url("/image/categoryimage.jpg");
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #e5e7eb;
+    transition: box-shadow 0.3s ease;
+}
+
+    .custom-navbar .nav-link {
+        position: relative;
+        color: whitesmoke !important;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+        .custom-navbar .nav-link:hover {
+            color: lawngreen !important;
+        }
+
+        .custom-navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: lawngreen;
+            transition: width 0.3s ease;
+        }
+
+        .custom-navbar .nav-link:hover::after {
+            width: 100%;
+        }
+
+/* User Panel */
+.user-panel {
+    display: none;
+    width: 220px;
+    animation: fadeDown 0.3s ease;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+.btnpanel:hover {
+    background: linear-gradient(90deg, #a3e635, #4ade80);
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons */
+.btn {
+    transition: all 0.3s ease-in-out;
+    border-radius: 9999px; /* pill style */
+}
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+
+/* Tabs */
+.nav-tabs .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #64748b;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+    .nav-tabs .nav-link.active {
+        color: #32cd32;
+        font-weight: 600;
+        border-bottom: 3px solid #32cd32; /* xanh lá nổi bật */
+        font-weight: bold;
+        background-color: #e6ffe6; /* xanh nhạt */
+        border-radius: 8px 8px 0 0;
+        font-weight: bold;
+    }
+
+    .nav-tabs .nav-link:hover {
+        background-color: #f5f5f5;
+        color: #32cd32;
+        border-bottom: 3px solid #0d9488;
+    }
+
+/* Tab content animation */
+.tab-content > .tab-pane {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.tab-content > .active {
+    display: block;
+    opacity: 1;
+}
+
+/* Footer */
+.footer-custom {
+    background: #0f172a;
+}
+
+    .footer-custom p,
+    .footer-custom small {
+        color: #94a3b8;
+    }
+
+    .footer-custom h6 {
+        color: #f8fafc;
+    }
+
+    .footer-custom p:hover {
+        color: #0d9488;
+        cursor: pointer;
+    }
+
