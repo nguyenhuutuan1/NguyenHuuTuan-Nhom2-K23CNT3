@@ -67,8 +67,7 @@ namespace FoodOrderWeb.Controllers
                 SortBy = sortBy,
                 MinPrice = minPrice,
                 MaxPrice = maxPrice,
-                AllCategories = _context.Categories.ToList(),
-                Categories = _context.Categories.ToList()
+                AllCategories = _context.Categories.ToList()
             };
 
             // --- L?c MenuItems ---
